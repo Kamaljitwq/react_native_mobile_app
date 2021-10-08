@@ -21,11 +21,17 @@ const Movies = () => {
     // const [upcoming, setUpcoming] = useState('')
 
     useEffect(() => {
-      fetch(movieURL)
-      .then((response) => response.json())
-      .then((json) => setTopRated(json.results))
-      .catch((error) => alert(error))
-      .finally(setLoading(false));
+      // fetch(movieURL)
+      // .then((response) => response.json())
+      // .then((data) => setTopRated(data.results))
+     
+      // .catch((error) => alert(error))
+      // .finally(setLoading(false));
+      // console.log(data.results)
+
+  fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d')
+  .then(response => response.json())
+  .then(data => console.log(data));
     });
 
   
