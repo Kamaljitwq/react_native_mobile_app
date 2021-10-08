@@ -13,43 +13,17 @@ const Tab = createMaterialTopTabNavigator();
 const movieURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d&language=en-US&page=1"
 
 const Movies = () => {
-    // const [playing, setNowPlaying] = useState('')
-    // const [popular, setGetPopular] = useState('')
     const [isLoading, setLoading] = useState(true);
     const [rated, setTopRated] = useState([]);
     
-    // const [upcoming, setUpcoming] = useState('')
-
     useEffect(() => {
-      // fetch(movieURL)
-      // .then((response) => response.json())
-      // .then((data) => setTopRated(data.results))
-     
-      // .catch((error) => alert(error))
-      // .finally(setLoading(false));
-      // console.log(data.results)
-
-  fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d')
-  .then(response => response.json())
-  .then(data => console.log(data));
-    });
-
+   
+      fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d')
+      .then(response => response.json())
+      .then(data => console.log(data));
+        });
+    
   
-  //  useEffect(() => {
-  //    const getTasks = async () => {
-  //      const tasksfromurl = await fetchTasks()
-  //      setTasks(tasksfromurl)
-  //    }
-     
-  //     getTasks()     
-  //   }, [])
-
-
-  //  const fetchTasks = async () => {
-  //     const res = await fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d&language=en-US&page=1')
-  //     const data = await res.json()
-  //     return data
-  //    }
 
 
   return (
