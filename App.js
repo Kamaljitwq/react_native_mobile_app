@@ -17,7 +17,7 @@ const Movies = () => {
     const [rated, setTopRated] = useState([]);
     
     useEffect(() => {
-   
+  //  fetching my working code
       fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42d89bcab6ae7677c8f20004d')
       .then(response => response.json())
       .then(data => console.log(data));
