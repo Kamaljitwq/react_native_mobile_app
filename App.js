@@ -15,6 +15,7 @@ const movieURL = "https://api.themoviedb.org/3/movie/top_rated?api_key=1fb9aab42
 const Movies = () => {
     const [isLoading, setLoading] = useState(true);
     const [rated, setTopRated] = useState([]);
+    const [rated, setTopRated] = useState([]);
     
     useEffect(() => {
   //  fetching my working code
@@ -23,6 +24,8 @@ const Movies = () => {
       .then(data => console.log(data));
         });
     
+
+
   
 
 
